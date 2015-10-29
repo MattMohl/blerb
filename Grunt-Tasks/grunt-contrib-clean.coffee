@@ -8,6 +8,9 @@ module.exports = (grunt) ->
 		html:
 			src: ["./build/public/**/*.html", "./dist/public/**/*.html"]
 
+		js:
+			src: ["./build/public/**/*.js", "./dist/public/**/*.js"]
+
 		css:
 			src: ["./build/public/css", "./dist/public/css"]
 

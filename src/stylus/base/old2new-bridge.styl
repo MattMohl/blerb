@@ -1,0 +1,36 @@
+body
+	background-color color-page-default-background
+
+body
+	.quickaccess
+	.main .menu
+	.searchBar
+	.breadcrumbs
+		font-family sans-serif
+
+@media (min-width 48.71em)
+	.main
+		height 44px
+	.menu
+		height 44px
+		width auto
+	
+.menu > .mainNavButton > .mainNavLink
+.menu > .mainNavButton:first-child > a
+	@media (min-width 48.71em)
+		padding 0 20px 0 15px
+	@media (min-width 57em)
+		padding 0 22px 0 17px
+
+	// @media (min-width: 57em)
+	// 	padding-left 17px
+
+.searchBar
+	height 44px !important // Yeah -- !important -_-
+	
+	input[type="text"].searchInput
+		@media (min-width 48.71em)
+			height 32px
+
+p
+	margin 0 0 1em 0

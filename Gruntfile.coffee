@@ -9,6 +9,8 @@ module.exports = (grunt) ->
 	# Register task aliases
 	grunt.registerTask "default", [
 		"clean:all"
+		"html:dev"
+		"js:dev"
 		"css:dev"
 		"plop-images"
 		"connect"
@@ -22,10 +24,14 @@ module.exports = (grunt) ->
 	# - WATCH COPY will be done by individual type-tasks, not the global
 
 	# HTML
-	# grunt.registerTask "html:dev", [
-	# 	"jade:dev"
-	# 	"copy:html"
-	# ]
+	grunt.registerTask "html:dev", [
+		"copy:html"
+	]
+
+	# JS
+	grunt.registerTask "js:dev", [
+		"copy:js"
+	]
 
 	# CSS
 	grunt.registerTask "css:dev", [

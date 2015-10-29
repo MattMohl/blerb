@@ -12,10 +12,18 @@ module.exports = (grunt) ->
 		html:
 			files: [{
 				expand: true
-				cwd: "build/public"
+				cwd: "src"
 				src: "**/*.html"
 				dest: "dist/public/"
 			}]
+
+		js:
+			files: [{
+					expand: true
+					cwd: "src/js"
+					src: "**/*.js"
+					dest: "dist/public/js/"
+				}]
 
 		css:
 			files: [{

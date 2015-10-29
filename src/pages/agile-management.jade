@@ -1,0 +1,179 @@
+extends /templates/html-shell
+
+block lead-content
+	.lead-display.agile-management
+	h1 <strong>NEW!</strong> Master Certificate in <strong>Agile Management</strong>
+	a.cta.btn(href="#") Learn More
+
+block body
+	section.sub-container.col-md-9
+		.span.primary
+			.default-content
+				div
+					.mainContent
+						div
+							header.cert
+								.col-md-6
+									.cert-display
+										h2 Master Certificate in Agile Mgmt.
+										.cert-fig-container.new
+											img.cert-fig(alt='vu-cert-image' src='/images/cert-image.png')
+										p $5,995 for 3-Course Master Certificate Package
+										p
+											strong Save $890.00
+										a.cta.btn.btn-primary(href='#register') Register Now
+								.col-md-6
+									p
+										| Led by some of the most highly credentialed experts working in the field today, the new Master Certificate in Agile Management program from Villanova University is the only comprehensive Agile training offered 100% online by a top-tier university. It’s also the only such program that aligns with multiple certifying bodies, including Scrum.com, ICAgile and PMI, enabling you to prepare for career-transforming industry certifications with unmatched convenience.
+									h2 Benefits &amp; Features
+									p
+										| The program introduces scrum, sprint, Kanban and all core Agile concepts, demonstrates how they fit together to improve projects and processes, and builds relevant skills you can apply immediately within your organization. When you complete your master certificate, you’ll be proud to add to your resume a credential from the university widely recognized for high academic standards and dedication to continuing education for adult professionals.
+									h2 Who Should Enroll?
+									p
+										| If you’re a professional working in any level of government or in healthcare, finance or other business sectors, you can benefit greatly from earning a Master Certificate in Agile Management. The program helps you prepare for certifications such as PMI-Agile Certified Practitioner (PMI-ACP), ICAgile Certified Professional (ICP) and Professional Scrum Master I (PSM-I). Any organization aiming to increase collaboration and improve overall results is also encouraged to consider this process improvement training for its workforce.
+								.clearfix
+							nav.course-sub-nav
+								ul
+									li#0.col-xs-4.current
+										div
+											.icon
+												include /images/agile-icon.svg
+											hr
+											h3 Course 1
+											.arrow
+									li#1.col-xs-4
+										div
+											.icon
+												include /images/agile-icon.svg
+											hr
+											h3 Course 2
+											.arrow
+									li#2.col-xs-4
+										div
+											.icon
+												include /images/agile-icon.svg
+											hr
+											h3 Course 3
+											.arrow
+									.clearfix
+						div
+							#courseContent
+								div
+									input.course-objectives.accordion.sub-nav(id="course-objectives",type="radio",name="sub-nav-accordion",class="hide sub-nav-switch",autocomplete="off",checked="checked")
+									label.course-objectives.accordion.sub-nav(for="course-objectives",id="course-objectives-btn")
+										h2 What You&rsquo;ll Study
+									.course-objectives.accordion.content
+										.col-md-6.column
+											ul
+												li The 4 values of Agile
+												li Who&rsquo;s who on a scrum team
+												li The intent behind each type of scrum meeting
+												li Defining what it means when a project is &ldquo;done&rdquo;
+												li Planning for sprint success
+												li Tracking project progress
+									input.course-overview.accordion.sub-nav(id="course-overview",type="radio",name="sub-nav-accordion",class="hide sub-nav-switch",autocomplete="off")
+									label.course-overview.accordion.sub-nav(for="course-overview",id="course-overview-btn")
+										h2 Course Overview
+									.course-overview.accordion.content
+										.col-md-12.column
+											p
+												| The first course of the Master Certificate in Agile Management, Essential Principles of Agile Management introduces you to the key doctrines, roles and terminology of an Agile environment during one eight-week online session. Essential Principles of Agile Management is also available as a standalone course, though you may find you’ll bring the greatest value to your organization and career by completing the full three-course master certificate.
+											.cta-container
+												h3 Individual Course Price: $2,095
+												a.cta.btn.btn-primary(href='#register') Register Now
+									input.course-curriculum.accordion.sub-nav(id="course-curriculum",type="radio",name="sub-nav-accordion",class="hide sub-nav-switch",autocomplete="off")
+									label.course-curriculum.accordion.sub-nav(for="course-curriculum",id="course-curriculum-btn")
+										h2 Course Curriculum
+									.course-curriculum.accordion.content
+										.col-md-6.column
+											h3.week Week 1
+											ul
+												li Agile Principles and Mindset (PMI-ACP® – Domain I)
+												li Advocate for Agile – Why Agile?
+												li Common Understanding – Agile Manifesto
+												li The Agile Manifesto for Non-Software Products
+												li Support Change
+												li The Agile Frameworks
+												li Visualization
+												li Safe and Trustful
+												li Enhance Creativity
+												li Share Knowledge
+												li Encourage Leadership
+												li Servant Leadership
+											h3.week Week 2
+											ul
+												li The Scrum Framework
+												li Define and Describe the 4 Values of Agile
+												li Empirical and Defined Processes
+												li Sprint – Iterative and Incremental
+												li Sprint – Protected
+												li Sprint – Timeboxed
+												li The Significance of Done
+												li The 5 Scrum Values
+												li Applicability of Scrum
+												li Other Agile Frameworks
+											h3.week Week 3
+											ul
+												li Scrum Team Roles
+												li Identify the 3 Scrum Roles
+												li Scrum Master
+												li Product Owner
+												li Authority
+												li The Scrum Team
+											h3.week Week 4
+											ul
+												li Value Driven Delivery (PMI-ACP® – Domain II)
+												li Define Deliverables
+												li Refine Requirements
+												li Select and Tailor Team Processes
+												li Small Releases
+												li Limit Increment Size
+												li Solicit Customer and User Feedback
+												li Prioritize the Units of Work
+												li Perform Frequent Review
+												li Improve Quality and Value of the Deliverables
+												li Conduct Operational Reviews
+												li Balance Development of Deliverable Units
+												li Re-Prioritize Requirements Periodically
+												li Conduct Frequent Reviews
+										.col-md-6.column
+											h3.week Week 5
+											ul
+												li Scrum Meetings
+												li Sprint Planning Meeting
+												li Daily Scrum Meeting
+												li Sprint Review Meeting
+												li Sprint Retrospective Meeting
+												li Release Planning Meeting
+												li Techniques for Planning
+											h3.week Week 6
+											ul
+												li Scrum Artifacts
+												li Product Backlog
+												li Product Increment and Definition of Done
+												li Sprint Backlog
+												li Sprint Burndown Chart
+												li Release Burndown Chart
+											h3.week Week 7
+											ul
+												li Agile Estimating and Planning
+												li Planning Basics and Need
+												li Story Points
+												li Ideal Days
+												li Planning Techniques
+												li Planning Poker
+												li Prioritizing
+												li Splitting User Stories
+												li Release Planning
+											h3.week Week 8
+											ul
+												li Stakeholder Engagement (PMI-ACP® Domain III)
+												li Business Stakeholders
+												li All Stakeholders
+												li Establish Stakeholder Relationships
+												li Maintain Stakeholder Involvement
+												li Establish Collaborative Behaviors
+												li Establish a Shared Vision
+												li Establish and Maintain a Shared Understanding
+												li Provide Transparency
+												li Provide Forecasts
