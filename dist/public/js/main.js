@@ -10,7 +10,7 @@ var DraftList = React.createClass({displayName: 'DraftList',
 		return React.createElement(
 			'ul',
 			null,
-			this.sets.map(createSet)
+			this.props.sets.map(createSet)
 			);
 	}
 });
@@ -18,36 +18,12 @@ var DraftList = React.createClass({displayName: 'DraftList',
 var DraftApp = React.createClass({
 	mixins: [ReactFireMixin],
 	componentWillMount: function() {
-		this.firebaseRef = new Firebase('https://ReactFireTodoApp.firebaseio.com/items/');
-		this.firebaseRef.limitToLast(25).on('value', function(dataSnapshot) {
-			var items = [];
-			dataSnapshot.forEach(function(childSnapshot) {
-				var item = childSnapshot.val();
-				item['.key'] = childSnapshot.key();
-				items.push(item);
-			}.bind(this));
-
-			this.setState({
-				items: items
-			});
-		}.bind(this));
-		
-		// this.ref = new Firebase('https://mtgsetsmm.firebaseio.com/');
-		// this.ref.on('value', function(data) {
-		// 	var sets = [];
-		// 	data.forEach(function(childData) {
-		// 		sets.push(childData.val());
-		// 	});
-		// 	this.setState({
-		// 		sets: sets
-		// 	});
-		// });
-		// 	console.log(this);
-		// this.bindAsArray(this.ref, "items");
-		// console.log(this, this.state);
+		this.firebaseRef = new Firebase('https://mtgsetsmm.firebaseio.com/');
+		this.bindAsArray(this.firebaseRef, "sets");
 	},
 	render: function render() {
-		// return React.createElement(DraftList, {items: this });
+		console.log(this.state.sets);
+		return React.createElement(DraftList, {items: this.state.sets });
 	}
 });
 
@@ -55,8 +31,3 @@ ReactDOM.render(
 	React.createElement(DraftApp, null),
 	document.getElementById('container')
 	);
-
-// ReactDOM.render(
-// 	React.createElement(Hello, {name: 'World'}),
-// 	document.getElementById('container')
-// 	);
