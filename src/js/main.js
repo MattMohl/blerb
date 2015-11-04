@@ -1,17 +1,18 @@
 var DraftList = React.createClass({displayName: 'DraftList',
 	render: function render() {
-		var createSet = function createSet(name, index) {
+		var createSet = function createSet(set, index) {
 			return React.createElement(
 				'li',
-				{key: index + name},
-				name
-				);
+				{key: index + set.name},
+				set.name
+			);
 		};
-		return React.createElement(
+		return React.createElement('button', null, 'click me'); React.createElement(
 			'ul',
 			null,
+			console.log(this.props.sets),
 			this.props.sets.map(createSet)
-			);
+		);
 	}
 });
 
@@ -22,12 +23,11 @@ var DraftApp = React.createClass({
 		this.bindAsArray(this.firebaseRef, "sets");
 	},
 	render: function render() {
-		console.log(this.state.sets);
-		return React.createElement(DraftList, {items: this.state.sets });
+		return React.createElement(DraftList, {sets: this.state.sets });
 	}
 });
 
 ReactDOM.render(
 	React.createElement(DraftApp, null),
 	document.getElementById('container')
-	);
+);
